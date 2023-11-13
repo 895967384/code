@@ -1,12 +1,19 @@
 #ifndef __ROLE_LIST__
 #define __ROLE_LIST__
 #include<stdio.h>
- 
+
+typedef struct user_to_dev{
+	int a;
+	int b;
+	int c;
+
+}
 struct list_head{
 	struct list_head *prev;
 	struct list_head *next;
 };
 typedef struct user_list{
+	int fd;
 	int num_type;
 	int IEMI_list;
 	//int math;
@@ -14,10 +21,11 @@ typedef struct user_list{
 }User_List;
 
 typedef struct dev_list{
+	int fd;
 	int num_type;
 	int IEMI_list;
 	struct list_head list;
-}
+}Dev_List;
 
 /*
 (1)INIT_LIST_HEAD()
